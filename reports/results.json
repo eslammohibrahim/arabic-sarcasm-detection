@@ -1,0 +1,123 @@
+{
+  "sizes": {
+    "train": 7276,
+    "val": 809,
+    "test": 1937
+  },
+  "sarcastic_share_test": 0.1631,
+  "models": {
+    "Always not sarcastic": {
+      "val": {
+        "accuracy": 0.843,
+        "f1_sarcastic": 0.0,
+        "precision_sarcastic": 0.0,
+        "recall_sarcastic": 0.0
+      }
+    },
+    "Naive Bayes (words) | words only": {
+      "best_param": 0.1,
+      "val": {
+        "accuracy": 0.7676,
+        "f1_sarcastic": 0.4503,
+        "precision_sarcastic": 0.3581,
+        "recall_sarcastic": 0.6063
+      }
+    },
+    "Logistic Regression (words) | words only": {
+      "best_param": 1,
+      "val": {
+        "accuracy": 0.7973,
+        "f1_sarcastic": 0.4533,
+        "precision_sarcastic": 0.3931,
+        "recall_sarcastic": 0.5354
+      }
+    },
+    "Linear SVM (characters) | words only": {
+      "best_param": 1.0,
+      "val": {
+        "accuracy": 0.8467,
+        "f1_sarcastic": 0.5079,
+        "precision_sarcastic": 0.512,
+        "recall_sarcastic": 0.5039
+      }
+    },
+    "Linear SVM (words + characters) | words only": {
+      "best_param": 0.1,
+      "val": {
+        "accuracy": 0.8208,
+        "f1_sarcastic": 0.5017,
+        "precision_sarcastic": 0.4451,
+        "recall_sarcastic": 0.5748
+      }
+    },
+    "Naive Bayes (words) | words + emojis/punctuation": {
+      "best_param": 0.1,
+      "val": {
+        "accuracy": 0.78,
+        "f1_sarcastic": 0.4765,
+        "precision_sarcastic": 0.3803,
+        "recall_sarcastic": 0.6378
+      }
+    },
+    "Logistic Regression (words) | words + emojis/punctuation": {
+      "best_param": 1,
+      "val": {
+        "accuracy": 0.7985,
+        "f1_sarcastic": 0.4656,
+        "precision_sarcastic": 0.3989,
+        "recall_sarcastic": 0.5591
+      }
+    },
+    "Linear SVM (characters) | words + emojis/punctuation": {
+      "best_param": 0.3,
+      "val": {
+        "accuracy": 0.8257,
+        "f1_sarcastic": 0.5087,
+        "precision_sarcastic": 0.4562,
+        "recall_sarcastic": 0.5748
+      }
+    },
+    "Linear SVM (words + characters) | words + emojis/punctuation": {
+      "best_param": 0.03,
+      "val": {
+        "accuracy": 0.8084,
+        "f1_sarcastic": 0.5048,
+        "precision_sarcastic": 0.4247,
+        "recall_sarcastic": 0.622
+      }
+    }
+  },
+  "picked": {
+    "model": "Linear SVM (characters)",
+    "text": "words + emojis/punctuation",
+    "param": 0.3
+  },
+  "test": {
+    "accuracy": 0.8049,
+    "f1_sarcastic": 0.4906,
+    "precision_sarcastic": 0.4272,
+    "recall_sarcastic": 0.5759
+  },
+  "test_always_not_sarcastic": {
+    "accuracy": 0.8369,
+    "f1_sarcastic": 0.0,
+    "precision_sarcastic": 0.0,
+    "recall_sarcastic": 0.0
+  },
+  "test_confusion": [
+    [
+      1377,
+      244
+    ],
+    [
+      134,
+      182
+    ]
+  ],
+  "test_by_dialect_recall": {
+    "Egyptian": 0.6871,
+    "Gulf": 0.4545,
+    "Levantine": 0.5769,
+    "MSA": 0.4622
+  }
+}
